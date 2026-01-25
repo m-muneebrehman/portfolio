@@ -23,7 +23,7 @@ export function Contact() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:hello@muneeb.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:umuhammadmuneeb@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -34,10 +34,9 @@ export function Contact() {
   };
 
   const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:hello@muneeb.com' },
+    { icon: Mail, label: 'Email', href: 'mailto:umuhammadmuneeb@gmail.com' },
     { icon: Github, label: 'GitHub', href: '#' },
     { icon: Linkedin, label: 'LinkedIn', href: '#' },
-    { icon: Twitter, label: 'Twitter', href: '#' },
   ];
 
   return (

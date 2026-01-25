@@ -31,9 +31,7 @@ export function Introduction() {
         </div>
         
         <p className="text-xl md:text-2xl leading-relaxed text-[#b0b0b0] font-light mb-8">
-          I'm a creative professional specializing in crafting exceptional digital experiences. 
-          With a focus on minimalism and precision, I transform ideas into elegant solutions 
-          that resonate with audiences and drive results.
+          I build software that's fast, functional, and actually useful. From full-stack web apps to automation and AI-powered tools, I turn ideas into systems that scale and don't break.
         </p>
 
         <motion.div
@@ -42,7 +40,7 @@ export function Introduction() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-wrap gap-4 mt-12"
         >
-          {['Design', 'Development', 'Strategy'].map((skill, index) => (
+          {['Design', 'Development','Full-stack development', 'Web apps', 'Automation'].map((skill, index) => (
             <motion.span
               key={skill}
               initial={{ opacity: 0, x: -20 }}

@@ -32,9 +32,9 @@ export function Hero({ isLoaded, heroOpacity, heroScale, heroY }: HeroProps) {
             scale: heroScale,
             y: heroY,
           }}
-          className="text-7xl sm:text-8xl md:text-9xl tracking-tight font-light bg-gradient-to-br from-white via-[#e0e0e0] to-[#a78bfa] bg-clip-text text-transparent"
+          className="text-4xl sm:text-5xl md:text-6xl tracking-tight font-light bg-gradient-to-br from-white via-[#e0e0e0] to-[#a78bfa] bg-clip-text text-transparent"
         >
-          Muneeb
+          Muhammad Muneeb ur Rehman
         </motion.h1>
 
         {/* Subtitle that fades in after name */}
@@ -45,7 +45,7 @@ export function Hero({ isLoaded, heroOpacity, heroScale, heroY }: HeroProps) {
           style={{ opacity: heroOpacity }}
           className="text-center mt-6 text-lg md:text-xl tracking-widest uppercase text-[#b0b0b0] font-light"
         >
-          Creative Professional
+          I don’t write code. I make ideas work.
         </motion.p>
 
         {/* Scroll indicator */}

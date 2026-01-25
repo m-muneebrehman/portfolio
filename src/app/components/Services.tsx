@@ -1,32 +1,44 @@
 import { motion } from 'motion/react';
 import { useInView } from '@/app/hooks/useInView';
-import { Sparkles, Code, Palette, MessageCircle } from 'lucide-react';
+import { Sparkles, Code, Palette, MessageCircle, Layout, ShoppingCart, TrendingUp, Zap, FileText, Server } from 'lucide-react';
 
 const services = [
-  {
-    title: 'Web Design',
-    description: 'Creating beautiful, user-centered designs that captivate and convert.',
-    icon: Palette,
-    color: '#a78bfa',
-  },
-  {
-    title: 'Development',
-    description: 'Building fast, responsive, and scalable web applications.',
-    icon: Code,
-    color: '#ec4899',
-  },
-  {
-    title: 'Brand Strategy',
-    description: 'Crafting cohesive brand identities that tell your story.',
-    icon: Sparkles,
-    color: '#8b5cf6',
-  },
-  {
-    title: 'Consultation',
-    description: 'Providing expert guidance to elevate your digital presence.',
-    icon: MessageCircle,
-    color: '#d946ef',
-  },
+{
+  title: 'Web Design',
+  description: 'Crafting sleek, user-focused designs that grab attention and drive action.',
+  icon: Palette,
+  color: '#a78bfa',
+},
+{
+  title: 'Development',
+  description: 'Building fast, scalable web apps that actually work under pressure.',
+  icon: Code,
+  color: '#ec4899',
+},
+{
+  title: 'E-commerce Solutions',
+  description: 'Creating secure, lightning-fast online stores optimized to convert.',
+  icon: ShoppingCart,
+  color: '#10b981',
+},
+{
+  title: 'SEO & Performance',
+  description: 'Boosting site visibility, speed, and engagement to dominate search results.',
+  icon: TrendingUp,
+  color: '#3b82f6',
+},
+{
+  title: 'Automation & Workflow',
+  description: 'Streamlining processes with smart automation to save time and cut errors.',
+  icon: Zap,
+  color: '#f97316',
+},
+{
+  title: 'API & Backend Integration',
+  description: 'Seamlessly connecting apps with reliable backend systems and services.',
+  icon: Server,
+  color: '#ef4444',
+},
 ];
 
 export function Services() {
