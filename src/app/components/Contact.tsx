@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { useInView } from '@/app/hooks/useInView';
-import { Send, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, Mail, Github, Linkedin } from 'lucide-react';
 
 export function Contact() {
   const { ref, isInView } = useInView();
@@ -35,8 +35,8 @@ export function Contact() {
 
   const socialLinks = [
     { icon: Mail, label: 'Email', href: 'mailto:umuhammadmuneeb@gmail.com' },
-    { icon: Github, label: 'GitHub', href: '#' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/m-muneebrehman' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammad-muneeb-rehman/' },
   ];
 
   return (

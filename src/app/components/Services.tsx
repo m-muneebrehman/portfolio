@@ -3,29 +3,18 @@ import { useInView } from '@/app/hooks/useInView';
 import { Sparkles, Code, Palette, MessageCircle, Layout, ShoppingCart, TrendingUp, Zap, FileText, Server } from 'lucide-react';
 
 const services = [
+  
 {
-  title: 'Web Design',
-  description: 'Crafting sleek, user-focused designs that grab attention and drive action.',
-  icon: Palette,
-  color: '#a78bfa',
-},
-{
-  title: 'Development',
+  title: 'Full-Stack Development',
   description: 'Building fast, scalable web apps that actually work under pressure.',
   icon: Code,
   color: '#ec4899',
 },
 {
-  title: 'E-commerce Solutions',
-  description: 'Creating secure, lightning-fast online stores optimized to convert.',
-  icon: ShoppingCart,
-  color: '#10b981',
-},
-{
-  title: 'SEO & Performance',
-  description: 'Boosting site visibility, speed, and engagement to dominate search results.',
-  icon: TrendingUp,
-  color: '#3b82f6',
+  title: 'Web Design',
+  description: 'Crafting sleek, user-focused designs that grab attention and drive action.',
+  icon: Palette,
+  color: '#a78bfa',
 },
 {
   title: 'Automation & Workflow',
@@ -39,6 +28,19 @@ const services = [
   icon: Server,
   color: '#ef4444',
 },
+{
+  title: 'E-commerce Solutions',
+  description: 'Creating secure, lightning-fast online stores optimized to convert.',
+  icon: ShoppingCart,
+  color: '#10b981',
+},
+{
+  title: 'SEO & Performance',
+  description: 'Boosting site visibility, speed, and engagement to dominate search results.',
+  icon: TrendingUp,
+  color: '#3b82f6',
+},
+
 ];
 
 export function Services() {

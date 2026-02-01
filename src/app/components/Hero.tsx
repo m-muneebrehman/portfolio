@@ -49,7 +49,7 @@ export function Hero({ isLoaded, heroOpacity, heroScale, heroY }: HeroProps) {
         </motion.p>
 
         {/* Scroll indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isLoaded ? 1 : 0 }}
           transition={{ duration: 1, delay: 1.5 }}
@@ -67,7 +67,7 @@ export function Hero({ isLoaded, heroOpacity, heroScale, heroY }: HeroProps) {
               className="w-1.5 h-1.5 bg-[#a78bfa] rounded-full"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
