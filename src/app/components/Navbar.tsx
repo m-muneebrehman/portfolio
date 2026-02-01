@@ -1,9 +1,12 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useState, useEffect } from 'react';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Menu } from 'lucide-react';
 
 export function Navbar() {
   const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   
   const navOpacity = useTransform(scrollY, [100, 200], [0, 1]);
   const navY = useTransform(scrollY, [100, 200], [-20, 0]);
@@ -20,9 +23,17 @@ export function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsOpen(false);
   };
 
   if (!isVisible) return null;
+
+  const navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'services', label: 'Services' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ];
 
   return (
     <motion.nav
@@ -38,12 +49,9 @@ export function Navbar() {
           Muneeb
         </motion.button>
 
-        <div className="flex gap-8 md:gap-12">
-          {[
-            { id: 'about', label: 'About' },
-            { id: 'services', label: 'Services' },
-            { id: 'contact', label: 'Contact' },
-          ].map((item, index) => (
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex gap-12">
+          {navItems.map((item, index) => (
             <motion.button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
@@ -58,6 +66,26 @@ export function Navbar() {
             </motion.button>
           ))}
         </div>
+
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger className="md:hidden text-[#b0b0b0] hover:text-[#a78bfa] transition-colors">
+            <Menu size={24} />
+          </SheetTrigger>
+          <SheetContent side="right" className="bg-[#1a1a1a]/95 border-l border-[#333333]/50 pl-6">
+            <div className="flex flex-col gap-6 mt-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-sm tracking-wider uppercase text-[#b0b0b0] hover:text-[#a78bfa] transition-colors text-left"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </motion.nav>
   );

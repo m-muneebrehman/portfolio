@@ -4,6 +4,7 @@ import { Navbar } from '@/app/components/Navbar';
 import { Hero } from '@/app/components/Hero';
 import { Introduction } from '@/app/components/Introduction';
 import { Services } from '@/app/components/Services';
+import { Projects } from '@/app/components/Projects';
 import { Contact } from '@/app/components/Contact';
 
 export default function App() {
@@ -42,6 +43,7 @@ export default function App() {
       <div className="relative z-10">
         <Introduction />
         <Services />
+        <Projects />
         <Contact />
       </div>
     </div>

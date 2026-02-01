@@ -32,7 +32,7 @@ export function Hero({ isLoaded, heroOpacity, heroScale, heroY }: HeroProps) {
             scale: heroScale,
             y: heroY,
           }}
-          className="text-4xl sm:text-5xl md:text-6xl tracking-tight font-light bg-gradient-to-br from-white via-[#e0e0e0] to-[#a78bfa] bg-clip-text text-transparent"
+          className="text-2xl sm:text-5xl md:text-6xl tracking-tight font-light bg-gradient-to-br from-white via-[#e0e0e0] to-[#a78bfa] bg-clip-text text-transparent text-center"
         >
           Muhammad Muneeb ur Rehman
         </motion.h1>
