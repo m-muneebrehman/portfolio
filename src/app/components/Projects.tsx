@@ -2,30 +2,31 @@ import { motion } from 'motion/react';
 import { useInView } from '@/app/hooks/useInView';
 import { ExternalLink } from 'lucide-react';
 
-const projects = [
-  {
-    title: 'Project One',
-    description: 'A brief description of your project and the technologies used.',
-    tags: ['React', 'TypeScript', 'Tailwind'],
-    liveUrl: '#',
+const projects = [ 
+    {
+    title: 'DataMind',
+    description: 'An AI-powered web platform that helps non-technical users understand and analyze business datasets with ease. Users can upload data and instantly receive automated insights, feature summaries, outlier detection, and clear explanations through an AI chat interface.',
+    tags: ['React', 'AI', 'Data Analytics'],
+    liveUrl: 'https://lnkd.in/dTp6QPAa',
   },
   {
-    title: 'Project Two',
-    description: 'A brief description of your project and the technologies used.',
-    tags: ['Next.js', 'Node.js', 'MongoDB'],
-    liveUrl: '#',
+    title: 'SoCal Prime Homes',
+    description: 'A Next.js app with built-in CMS for lead generation in the field of real estate.',
+    tags: ['Next.js', 'CMS', 'Real Estate'],
+    liveUrl: 'https://www.socalprimehomes.com/',
+  },
+ 
+  {
+    title: 'Yappify',
+    description: 'A translation tool with options to translate plain text or even files.',
+    tags: ['Translation', 'File Processing', 'Web App'],
+    liveUrl: 'https://yappify-delta.vercel.app/',
   },
   {
-    title: 'Project Three',
-    description: 'A brief description of your project and the technologies used.',
-    tags: ['Python', 'FastAPI', 'PostgreSQL'],
-    liveUrl: '#',
-  },
-  {
-    title: 'Project Four',
-    description: 'A brief description of your project and the technologies used.',
-    tags: ['Vue.js', 'Firebase', 'Stripe'],
-    liveUrl: '#',
+    title: 'Fast Fuel',
+    description: 'A web-based e-commerce platform that provides users with the facility to order fuel and car parts.',
+    tags: ['E-commerce', 'Web App', 'Fuel Delivery'],
+    liveUrl: 'https://lnkd.in/da7PwgZk',
   },
 ];
 
@@ -95,6 +96,8 @@ export function Projects() {
                 <div className="flex gap-4">
                   <a 
                     href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm tracking-wider uppercase text-[#b0b0b0] hover:text-[#a78bfa] transition-colors"
                   >
                     <ExternalLink size={16} />
