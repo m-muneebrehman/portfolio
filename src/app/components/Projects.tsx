@@ -37,7 +37,7 @@ export function Projects() {
     <section 
       id="projects"
       ref={ref}
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 py-24 relative"
+      className="flex items-center justify-start px-6 md:px-12 py-12 relative scroll-mt-28"
     >
       <div className="max-w-6xl w-full">
         <div className="relative mb-20">
@@ -45,14 +45,14 @@ export function Projects() {
             initial={{ width: 0 }}
             animate={isInView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="h-[2px] bg-gradient-to-r from-[#a78bfa] to-[#ec4899] mb-8"
+            className="h-[2px] bg-primary mb-6"
           />
           
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-6xl tracking-tight font-light bg-gradient-to-r from-white to-[#a78bfa] bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl font-bold tracking-tight text-foreground"
           >
             Projects
           </motion.h2>
@@ -69,23 +69,23 @@ export function Projects() {
                 ease: "easeOut",
                 delay: index * 0.1 
               }}
-              className="group relative border border-[#333333] hover:border-[#a78bfa]/50 transition-all duration-500 bg-gradient-to-br from-transparent to-[#a78bfa]/5 hover:to-[#a78bfa]/10 overflow-hidden"
+              className="group relative border border-border hover:border-primary/50 transition-all duration-500 bg-card hover:shadow-[0_0_15px_rgba(79,209,197,0.15)] overflow-hidden rounded-xl"
             >
               <div className="p-6 md:p-8 relative z-10">
-                <h3 className="text-2xl md:text-3xl mb-3 tracking-tight font-light transition-colors group-hover:text-white">
+                <h3 className="text-xl md:text-2xl mb-3 font-semibold tracking-tight text-foreground">
                   {project.title}
                 </h3>
                 
-                <p className="text-[#999999] leading-relaxed mb-4 font-light">
+                <p className="text-muted-foreground leading-relaxed mb-6 text-base">
                   {project.description}
                 </p>
                 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag) => (
                     <span 
                       key={tag}
-                      className="text-xs tracking-wider uppercase px-3 py-1 border border-[#444444] text-[#b0b0b0] hover:border-[#a78bfa]/50 hover:text-[#a78bfa] transition-colors"
+                      className="text-xs font-medium px-3 py-1 rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors bg-secondary/50"
                     >
                       {tag}
                     </span>
@@ -93,12 +93,12 @@ export function Projects() {
                 </div>
                 
                 {/* Links */}
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-auto">
                   <a 
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm tracking-wider uppercase text-[#b0b0b0] hover:text-[#a78bfa] transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink size={16} />
                     Live Demo

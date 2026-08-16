@@ -8,7 +8,7 @@ export function Introduction() {
     <section 
       id="about"
       ref={ref}
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 relative"
+      className="flex items-center justify-start px-6 md:px-12 py-12 relative scroll-mt-28"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -22,15 +22,15 @@ export function Introduction() {
             initial={{ width: 0 }}
             animate={isInView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="h-[2px] bg-gradient-to-r from-[#a78bfa] to-[#ec4899] mb-8"
+            className="h-[2px] bg-primary mb-6"
           />
           
-          <h2 className="text-5xl md:text-6xl mb-12 tracking-tight font-light bg-gradient-to-r from-white to-[#a78bfa] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl mb-12 font-bold tracking-tight text-foreground">
             About
           </h2>
         </div>
         
-        <p className="text-xl md:text-2xl leading-relaxed text-[#b0b0b0] font-light mb-8">
+        <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground mb-8">
           I build software that's fast, functional, and actually useful. From full-stack web apps to automation and AI-powered tools, I turn ideas into systems that scale and don't break.
         </p>
 
@@ -46,7 +46,7 @@ export function Introduction() {
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ delay: 0.5 + index * 0.1 }}
-              className="px-6 py-3 border border-[#a78bfa]/30 text-[#a78bfa] hover:bg-[#a78bfa]/10 transition-colors cursor-default"
+              className="px-5 py-2.5 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary/50 bg-card/50 transition-colors cursor-default text-sm font-medium"
             >
               {skill}
             </motion.span>

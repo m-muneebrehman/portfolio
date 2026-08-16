@@ -43,7 +43,7 @@ export function Contact() {
     <section 
       id="contact"
       ref={ref}
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 py-24 relative"
+      className="flex items-center justify-start px-6 md:px-12 py-12 relative scroll-mt-28"
     >
       <div className="max-w-3xl w-full">
         <div className="relative mb-16">
@@ -51,14 +51,14 @@ export function Contact() {
             initial={{ width: 0 }}
             animate={isInView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="h-[2px] bg-gradient-to-r from-[#a78bfa] to-[#ec4899] mb-8"
+            className="h-[2px] bg-primary mb-6"
           />
           
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-6xl mb-6 tracking-tight font-light bg-gradient-to-r from-white to-[#a78bfa] bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl mb-4 font-bold tracking-tight text-foreground"
           >
             Let's Work Together
           </motion.h2>
@@ -67,7 +67,7 @@ export function Contact() {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            className="text-lg text-[#b0b0b0] font-light"
+            className="text-lg text-muted-foreground"
           >
             Have a project in mind? Get in touch and let's create something extraordinary.
           </motion.p>
@@ -81,7 +81,7 @@ export function Contact() {
           className="space-y-8 mb-16"
         >
           <div className="relative">
-            <label htmlFor="name" className="block text-sm mb-3 text-[#b0b0b0] font-light">
+            <label htmlFor="name" className="block text-sm mb-2 text-muted-foreground font-medium">
               Name
             </label>
             <input
@@ -90,21 +90,13 @@ export function Contact() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              onFocus={() => setIsFocused({ ...isFocused, name: true })}
-              onBlur={() => setIsFocused({ ...isFocused, name: false })}
               required
-              className="w-full bg-transparent border border-[#333333] px-4 py-3 focus:border-[#a78bfa] focus:outline-none transition-colors"
+              className="w-full bg-card/50 border border-border rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             />
-            {isFocused.name && (
-              <motion.div
-                layoutId="input-border"
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#a78bfa] to-[#ec4899]"
-              />
-            )}
           </div>
 
           <div className="relative">
-            <label htmlFor="email" className="block text-sm mb-3 text-[#b0b0b0] font-light">
+            <label htmlFor="email" className="block text-sm mb-2 text-muted-foreground font-medium">
               Email
             </label>
             <input
@@ -113,21 +105,13 @@ export function Contact() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              onFocus={() => setIsFocused({ ...isFocused, email: true })}
-              onBlur={() => setIsFocused({ ...isFocused, email: false })}
               required
-              className="w-full bg-transparent border border-[#333333] px-4 py-3 focus:border-[#a78bfa] focus:outline-none transition-colors"
+              className="w-full bg-card/50 border border-border rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
             />
-            {isFocused.email && (
-              <motion.div
-                layoutId="input-border"
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#a78bfa] to-[#ec4899]"
-              />
-            )}
           </div>
 
           <div className="relative">
-            <label htmlFor="message" className="block text-sm mb-3 text-[#b0b0b0] font-light">
+            <label htmlFor="message" className="block text-sm mb-2 text-muted-foreground font-medium">
               Message
             </label>
             <textarea
@@ -135,25 +119,17 @@ export function Contact() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              onFocus={() => setIsFocused({ ...isFocused, message: true })}
-              onBlur={() => setIsFocused({ ...isFocused, message: false })}
               required
               rows={6}
-              className="w-full bg-transparent border border-[#333333] px-4 py-3 focus:border-[#a78bfa] focus:outline-none transition-colors resize-none"
+              className="w-full bg-card/50 border border-border rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all resize-none"
             />
-            {isFocused.message && (
-              <motion.div
-                layoutId="input-border"
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#a78bfa] to-[#ec4899]"
-              />
-            )}
           </div>
 
           <motion.button
             type="submit"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="group w-full md:w-auto px-12 py-4 bg-gradient-to-r from-[#a78bfa] to-[#ec4899] text-white hover:shadow-lg hover:shadow-[#a78bfa]/25 transition-all duration-300 flex items-center justify-center gap-3"
+            className="group w-full md:w-auto px-10 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:shadow-[0_0_20px_rgba(79,209,197,0.3)] transition-all duration-300 flex items-center justify-center gap-3"
           >
             Send Message
             <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -177,7 +153,7 @@ export function Contact() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.5 + index * 0.05 }}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="w-12 h-12 border border-[#333333] hover:border-[#a78bfa] flex items-center justify-center text-[#b0b0b0] hover:text-[#a78bfa] transition-all duration-300 group"
+                className="w-12 h-12 rounded-lg border border-border hover:border-primary/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all duration-300 group"
                 aria-label={social.label}
               >
                 <Icon className="w-5 h-5" strokeWidth={1.5} />
@@ -190,9 +166,9 @@ export function Contact() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          className="pt-12 border-t border-[#333333]/50 text-center"
+          className="pt-12 border-t border-border text-center"
         >
-          <p className="text-sm text-[#666666] font-light">
+          <p className="text-sm text-muted-foreground">
             © 2026 Muneeb. All rights reserved.
           </p>
         </motion.div>
